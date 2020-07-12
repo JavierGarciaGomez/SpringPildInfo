@@ -3,9 +3,11 @@ package es.spring.l21Annotations2;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan("es.spring.l21Annotations2")
+@PropertySource("classpath:datosEmpresa.propiedades")
 public class EmpleadosConfig {
 
 	// Definir el bean para el informe financiero

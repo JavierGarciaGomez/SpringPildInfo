@@ -22,17 +22,20 @@ public class Main {
 		AnnotationConfigApplicationContext config = new AnnotationConfigApplicationContext(EmpleadosConfig.class);
 		// Pedir el bean con annotation
 		comercial1 = config.getBean("comercialExperimentado", iEmpleados.class);
-		
+
 		System.out.println(comercial1);
-		
-		// Lesson 23 config javaClass not XML
+
+		// Lesson 24 config javaClass not XML
 		System.out.println("************LESSON 24****************");
 		iEmpleados empleado = config.getBean("directorFinanciero", iEmpleados.class);
 		System.out.println(empleado.getInforme());
 		System.out.println(empleado.getTareas());
 
-		
-		
+		// Lesson 25 Properties
+		System.out.println("************LESSON 25****************");
+		DirectorFinanciero dirFin = config.getBean("directorFinanciero", DirectorFinanciero.class);
+		System.out.println(dirFin.getEmail()+dirFin.getNombreEmpresa());
+
 		context.close();
 
 	}
