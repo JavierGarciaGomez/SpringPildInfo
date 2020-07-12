@@ -8,13 +8,13 @@ public class Main {
 		System.out.println("************LESSON 13****************");
 		// Cargar xml
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext13.xml");
-		// Pedir el bean con Singleton
+		// Pedir el bean con Prototype
 		SecretarioEmpleado secretarioEmp1 = context.getBean("secEmp", SecretarioEmpleado.class);
 		SecretarioEmpleado secretarioEmp2 = context.getBean("secEmp", SecretarioEmpleado.class);
 
 		System.out.println(secretarioEmp1 + " " + secretarioEmp2);
 
-		// Pedir el bean con Prototype
+		// Pedir el bean con Singleton
 		iEmpleados directorEmp1 = context.getBean("dirEmp", DirectorEmpleado.class);
 		iEmpleados directorEmp2 = context.getBean("dirEmp", DirectorEmpleado.class);
 		System.out.println(directorEmp1 + " " + directorEmp2);
