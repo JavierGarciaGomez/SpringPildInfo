@@ -8,24 +8,30 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
+	<!-- 12. Propiedades mediante archivo externo -->
+	<context:property-placeholder location="classpath:datosEmpresa.propiedades"/>
 
-	<!-- CREACIÓN DE LA DEPENDENCIA MEDIANTE CONSTRUCTOR-->
-	<bean id="injectReport" class="es.spring.ioc.l06_09.Informe" />
 
-	<bean id="jefeEmp" class="es.spring.ioc.l06_09.JefeEmpleado">
+	<!-- CREACIÓN DE LA DEPENDENCIA MEDIANTE CONSTRUCTOR -->
+	<bean id="injectReport" class="es.spring.l06_12.Informe" />
+
+	<bean id="jefeEmp" class="es.spring.l06_12.JefeEmpleado">
 		<constructor-arg ref="injectReport"></constructor-arg>
 	</bean>
-	<bean id="dirEmp" class="es.spring.ioc.l06_09.DirectorEmpleado">
+	<bean id="dirEmp" class="es.spring.l06_12.DirectorEmpleado">
 		<constructor-arg ref="injectReport"></constructor-arg>
+		<!-- 12. INYECCIÓN DE CAMPOS MEDIANTE ARCHIVO EXTERNO -->
+		<property name="email" value="${email}" />
+		<property name="nombreEmpresa" value="${nombreEmpresa}" />
 	</bean>
-	<!-- CREACIÓN DE LA DEPENDENCIA MEDIANTE SETTER-->
-	<bean id="secEmp" class="es.spring.ioc.l06_09.SecretarioEmpleado">
-		<property name="informeNuevo" ref="injectReport"/>
-		<!-- 11. INYECCIÓN DE CAMPOS-->
-		<property name="email" ref="injectReport"/>
-		<property name="nombreEmpresa" ref="injectReport"/>
+	<!-- CREACIÓN DE LA DEPENDENCIA MEDIANTE SETTER -->
+	<bean id="secEmp" class="es.spring.l06_12.SecretarioEmpleado">
+		<property name="informeNuevo" ref="injectReport" />
+		<!-- 11. INYECCIÓN DE CAMPOS -->
+		<property name="email" value="secretario@spring.com" />
+		<property name="nombreEmpresa" value="Spring SA" />
 	</bean>
-	
-	
+
+
 
 </beans>

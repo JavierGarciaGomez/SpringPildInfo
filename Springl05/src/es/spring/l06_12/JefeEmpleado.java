@@ -1,4 +1,4 @@
-package es.spring.ioc.l06_09;
+package es.spring.l06_12;
 
 public class JefeEmpleado implements iEmpleados{
 	

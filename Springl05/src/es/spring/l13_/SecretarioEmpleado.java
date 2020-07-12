@@ -1,4 +1,4 @@
-package es.spring.ioc.l06_09;
+package es.spring.l13_;
 
 public class SecretarioEmpleado implements iEmpleados {
 
@@ -42,6 +42,7 @@ public class SecretarioEmpleado implements iEmpleados {
 		return informeNuevo;
 	}
 
+	
 	
 	
 	
