@@ -11,5 +11,10 @@
 	<h1>First Spring MVC example.</h1>
 	<a href="showForm">Ir al formulario</a>
 	
+	<!-- lesson 35 -->
+	<h1>First Spring MVC example.</h1>
+	<a href="alumno/muestraFormulario">Ir al formulario de registro</a>
+	 
+	
 </body>
 </html>
