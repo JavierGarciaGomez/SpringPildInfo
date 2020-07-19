@@ -11,6 +11,8 @@
 
 	<form:form action="procesarFormulario" modelAttribute="alumno">
 	Nombre: <form:input path="nombre" />
+		<!-- 39 Errores -->
+		<form:errors path="nombre"  style="color:red"/>
 		<br>
 		<br>
 		<br>
@@ -40,7 +42,16 @@
 		<p>Idiomas</p>
 		Inglés<form:checkbox path="idioma" value="ingles" />
 		Francés<form:checkbox path="idioma" value="frances" />
-		
+		<!-- 40 -->
+		<br>
+		<br>
+			Edad: <form:input path="edad" />
+			<form:errors path="edad"  style="color:red"/>
+		<br>
+		<br>
+			Email: <form:input path="email" />
+			<form:errors path="email"  style="color:red"/>
+		<br>
 		<br>
 		<br>
 		<input type="submit" value="Enviar" />

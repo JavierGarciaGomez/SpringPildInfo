@@ -15,6 +15,10 @@ La asignatura escogida es: ${alumno.optativa}
 La ciudad escogida es: ${alumno.ciudad}
 <br><br>
 El idioma escogida es: ${alumno.idioma}  
+<br><br>
+La edad: ${alumno.edad}  
+<br><br>
+Email: ${alumno.email}  
 
 
 
