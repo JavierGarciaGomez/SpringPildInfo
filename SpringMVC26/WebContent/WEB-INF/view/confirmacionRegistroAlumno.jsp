@@ -19,6 +19,10 @@ El idioma escogida es: ${alumno.idioma}
 La edad: ${alumno.edad}  
 <br><br>
 Email: ${alumno.email}  
+<br><br>
+Código Postal: ${alumno.codigoPostal}  
+<br><br>
+Código Postal de Madrid: ${alumno.codigoPostalMadrid}  
 
 
 

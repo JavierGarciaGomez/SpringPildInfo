@@ -2,6 +2,8 @@ package es.MVC;
 
 import javax.validation.constraints.*;
 
+import es.MVC.ValidacionesPersonalizadas.CodPosMadrid;
+
 public class Alumno {
 	// 39. Notnull annotations	
 	@NotNull
@@ -18,7 +20,32 @@ public class Alumno {
 	private int edad;
 	@Email(message="Tiene que tener formato de email")
 	private String email;
+	// 42 Regex validation
+	@Pattern(regexp="[0-9]{5}", message="solo 5 valores numéricos")
+	private String codigoPostal;
+	// 45 Validación propia
+	@CodPosMadrid
+	private String codigoPostalMadrid;
 	
+	
+	
+	
+
+	public String getCodigoPostalMadrid() {
+		return codigoPostalMadrid;
+	}
+
+	public void setCodigoPostalMadrid(String codigoPostalMadrid) {
+		this.codigoPostalMadrid = codigoPostalMadrid;
+	}
+
+	public String getCodigoPostal() {
+		return codigoPostal;
+	}
+
+	public void setCodigoPostal(String codigoPostal) {
+		this.codigoPostal = codigoPostal;
+	}
 
 	public String getEmail() {
 		return email;

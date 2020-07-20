@@ -51,6 +51,16 @@
 		<br>
 			Email: <form:input path="email" />
 			<form:errors path="email"  style="color:red"/>
+			
+		<br>
+		<br>
+			Código Postal: <form:input path="codigoPostal" />
+			<form:errors path="codigoPostal"  style="color:red"/>
+			
+		<br>
+		<br>
+			Código Postal Madrid: <form:input path="codigoPostalMadrid" />
+			<form:errors path="codigoPostalMadrid"  style="color:red"/>
 		<br>
 		<br>
 		<br>
